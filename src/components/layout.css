@@ -558,7 +558,7 @@ thead {
 td,
 th {
   text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  border: 1px solid hsla(0, 0%, 0%, 0.12);
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
@@ -567,14 +567,6 @@ th {
   padding-right: 0.96667rem;
   padding-top: 0.725rem;
   padding-bottom: calc(0.725rem - 1px);
-}
-th:first-child,
-td:first-child {
-  padding-left: 0;
-}
-th:last-child,
-td:last-child {
-  padding-right: 0;
 }
 tt,
 code {
@@ -614,7 +606,7 @@ a::selection {
 }
 
 .gatsby-highlight {
-  background-color: #1d1f21;
+  background-color: #263238;
   border-radius: 0.3em;
   margin: 0.5em 0;
   padding: 1em;

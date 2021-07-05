@@ -10,6 +10,7 @@ const Content = styled.div`
   margin: 0 auto;
   max-width: 860px;
   padding: 1.45rem 1.0875rem;
+  height: 78vh;
 `
 
 const ArticleDate = styled.h5`
