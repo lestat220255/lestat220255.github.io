@@ -1,14 +1,11 @@
 ---
-title: "Golang+Redis分布式可重入锁"
-date: "2021-05-03"
+title: Golang+Redis分布式可重入锁
+date: 2021-07-05T14:57:51.923Z
 draft: false
-path: "/blog/Golang+Redis分布式可重入锁"
+path: /blog/Golang+Redis分布式可重入锁
+description: 自动重试,自动续期,可重入
 ---
-
-
 ### 概念
-
-
 
 > [计算机科学](https://zh.wikipedia.org/wiki/计算机科学)中，**可重入互斥锁**（英語：reentrant mutex）是[互斥锁](https://zh.wikipedia.org/wiki/互斥锁)的一种，同一[线程](https://zh.wikipedia.org/wiki/线程)对其多次加锁不会产生[死锁](https://zh.wikipedia.org/wiki/死锁)。可重入互斥锁也称**递归互斥锁**（英語：recursive mutex）或**递归锁**（英語：recursive lock）。
 >
