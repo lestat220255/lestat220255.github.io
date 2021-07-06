@@ -4,10 +4,12 @@ module.exports = {
     subtitle: `web developer`,
     description: `DevOps and relevant stuff`,
     author: `@lester`,
+    siteUrl: `https://yup-i-love-noodles.netlify.app`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
+    `netlify-cms-widget-markdown`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
