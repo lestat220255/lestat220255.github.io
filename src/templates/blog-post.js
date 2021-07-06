@@ -66,7 +66,7 @@ export default ({ data }) => {
         </HeaderDate>
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
-      <DisqusContainer pageUrl={window.location.href} pageIdentifier={window.location.href} pageTitle={post.frontmatter.title}/>
+      <DisqusContainer pageUrl={typeof window !== 'undefined' && window.location.href} pageIdentifier={typeof window !== 'undefined' && window.location.href} pageTitle={post.frontmatter.title}/>
     </Layout>
   )
 }
