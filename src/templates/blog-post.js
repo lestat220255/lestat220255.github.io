@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import DisqusContainer from "../components/disqus"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -65,6 +66,7 @@ export default ({ data }) => {
         </HeaderDate>
         <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
       </Content>
+      <DisqusContainer pageUrl={window.location.href} pageIdentifier={window.location.href} pageTitle={post.frontmatter.title}/>
     </Layout>
   )
 }
