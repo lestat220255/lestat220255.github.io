@@ -28,7 +28,6 @@ class Typing extends React.Component {
   render() {
     return (
       <TypedBox
-        style={{ whiteSpace: "pre" }}
         ref={(el) => {
           this.el = el
         }}

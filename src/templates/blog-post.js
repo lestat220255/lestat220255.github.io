@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -50,29 +50,62 @@ const MarkdownContent = styled.div`
     text-decoration: underline;
   }
 `
-
-export default ({ data }) => {
-  const post = data.markdownRemark
-  return (
-    <Layout>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
-      <Content>
-        <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
-        <HeaderDate>
-          {post.frontmatter.date} - {post.fields.readingTime.text}
-        </HeaderDate>
-        <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Content>
-      <DisqusContainer pageUrl={typeof window !== 'undefined' && window.location.href} pageIdentifier={typeof window !== 'undefined' && window.location.href} pageTitle={post.frontmatter.title}/>
-    </Layout>
-  )
+class IndexPage extends React.Component {
+  render() {
+    const post = this.props.data.markdownRemark
+    // const siteTitle = this.props.data.site.siteMetadata.title
+    const { previous, next } = this.props.pageContext
+    return (
+      <Layout>
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
+        />
+        <Content>
+          <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
+          <HeaderDate>
+            {post.frontmatter.date} - {post.fields.readingTime.text}
+          </HeaderDate>
+          <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <Link to={`/blog/${previous.frontmatter.title}`} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={`/blog/${next.frontmatter.title}`} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </Content>
+        <DisqusContainer
+          pageUrl={typeof window !== "undefined" && window.location.href}
+          pageIdentifier={typeof window !== "undefined" && window.location.href}
+          pageTitle={post.frontmatter.title}
+        />
+      </Layout>
+    )
+  }
 }
 
+export default IndexPage
+
 export const pageQuery = graphql`
-  query($path: String!) {
+  query ($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       excerpt(pruneLength: 160)
