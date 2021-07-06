@@ -4,6 +4,8 @@ date: 2017-09-05T22:39:11.923Z
 draft: false
 path: /blog/油猴的简单使用
 description: 挖掘chrome的潜力
+featuredpost: true
+featuredimage: /img/1200px-greasemonkey.svg.png
 ---
 
 > 关于greasemonkey(油猴)的安装和一些实用脚本推荐
