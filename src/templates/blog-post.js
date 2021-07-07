@@ -67,31 +67,31 @@ class IndexPage extends React.Component {
             {post.frontmatter.date} - {post.fields.readingTime.text}
           </HeaderDate>
           <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={`/blog/${previous.frontmatter.title}`} rel="prev">
-                  ← {previous.frontmatter.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={`/blog/${next.frontmatter.title}`} rel="next">
-                  {next.frontmatter.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
         </Content>
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+          <li>
+            {previous && (
+              <Link to={`/blog/${previous.frontmatter.title}`} rel="prev">
+                ← {previous.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={`/blog/${next.frontmatter.title}`} rel="next">
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul>
         <DisqusContainer
           pageUrl={typeof window !== "undefined" && window.location.href}
           pageIdentifier={typeof window !== "undefined" && window.location.href}
