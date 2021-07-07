@@ -24,9 +24,10 @@ const BlockQuote = styled.blockquote`
     padding: 0.5em 10px;
     max-height: 510px;
     overflow: scroll;
+    color: #4a4a4a;
   }
   &:before {
-    color: #ccc;
+    color: #4a4a4a;
     content: open-quote;
     font-size: 4em;
     line-height: 0.1em;
@@ -38,6 +39,12 @@ const BlockQuote = styled.blockquote`
   }
 `
 
+const QuoteAuthor = styled.div`
+  text-align: right !important;
+  font-weight: bold;
+  color: #4a4a4a;
+`
+
 const IndexPage = () => (
   <Layout>
     <Seo
@@ -47,12 +54,15 @@ const IndexPage = () => (
     <AboutContainer>
       <AboutMe>一个半路出家的编程爱好者，喜欢折腾。</AboutMe>
       <BlockQuote>
+        <div>
         At some point, everything is going to go south on you. Everything is
         going to go south and you're going to say, "This is it. "This is how I
         end." Now, you can either accept that or you can get to work. That's all
         it is. You just begin. You do the math. You solve one problem then you
         solve the next one. And then the next. And if you solve enough problems,
         you get to come home.
+        </div>
+        <QuoteAuthor>—The Martian</QuoteAuthor>
       </BlockQuote>
     </AboutContainer>
   </Layout>

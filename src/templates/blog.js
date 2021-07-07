@@ -56,6 +56,25 @@ const TagContainer = styled.span`
   }
 `
 
+const ItemBottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const ReadMore = styled.span`
+  cursor: pointer;
+  margin: 10px 5px;
+  font-size: 20px;
+  border: 1px;
+  & > a {
+    text-decoration: none;
+  }
+`
+
+const TagsContainer = styled.span`
+  padding: calc(0.5em - 1px) 0;
+`
+
 class IndexPage extends React.Component {
   render() {
     const { data } = this.props
@@ -66,7 +85,6 @@ class IndexPage extends React.Component {
     const prevPage =
       current - 1 === 1 ? "/blog" : `/blog/` + (current - 1).toString()
     const nextPage = `/blog/` + (current + 1).toString()
-    console.log(posts)
     return (
       <Layout>
         <Seo title="Blog" />
@@ -94,13 +112,20 @@ class IndexPage extends React.Component {
                   <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
                 </div>
                 <p>{node.excerpt}</p>
-                {node.frontmatter.tags.map((tag, key) => {
-                  return (
-                    <TagContainer key={key}>
-                      <Link to={`/tags/` + tag}>{tag}</Link>
-                    </TagContainer>
-                  )
-                })}
+                <ItemBottom>
+                  <TagsContainer>
+                    {node.frontmatter.tags.map((tag, key) => {
+                      return (
+                        <TagContainer key={key}>
+                          <Link to={`/tags/` + tag}>{tag}</Link>
+                        </TagContainer>
+                      )
+                    })}
+                  </TagsContainer>
+                  <ReadMore>
+                    <Link to={node.frontmatter.path}>Read More →</Link>
+                  </ReadMore>
+                </ItemBottom>
               </PostsContainer>
             ))}
         </Content>
