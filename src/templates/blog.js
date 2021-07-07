@@ -61,11 +61,14 @@ const ItemBottom = styled.div`
   justify-content: space-between;
 `
 
-const ReadMore = styled.span`
+const ReadMore = styled.button`
   cursor: pointer;
   margin: 10px 5px;
   font-size: 20px;
-  border: 1px;
+  background-color: inherit;
+  border-color: inherit;
+  border-width: 2px;
+  border-radius: 5px;
   & > a {
     text-decoration: none;
   }
