@@ -31,7 +31,7 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <Seo title="Tags" />
+      <Seo title="Tags" description={tag} />
       <Content>
         <h1>{tagHeader}</h1>
         {edges.map(({ node }) => {

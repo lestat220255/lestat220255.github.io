@@ -41,7 +41,7 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <Seo title="Blog" />
+    <Seo title="Tags" description="Tags" />
     <Content>
       <h1>Tags</h1>
       <TagsContainer>
