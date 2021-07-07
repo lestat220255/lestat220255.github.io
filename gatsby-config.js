@@ -5,8 +5,8 @@ require("dotenv").config({
 module.exports = {
   pathPrefix: "/lestat220255.github.io",
   siteMetadata: {
-    title: `Yup I Love Noodles`,
-    subtitle: `Lester Lee`,
+    title: `Lester Lee`,
+    subtitle: `web developer`,
     description: `DevOps and relevant stuff`,
     author: `@lester`,
     siteUrl: `https://yup-i-love-noodles.netlify.app`,
