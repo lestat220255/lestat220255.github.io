@@ -16,6 +16,22 @@ const Content = styled.div`
   padding: 1.45rem 1.0875rem;
 `
 
+const TagsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`
+
+const TagContainer = styled.div`
+    margin: 10px 5px;
+    font-size: 20px;
+    & > a {
+        text-decoration: none;
+    }
+    & :before{
+        content: "🏷️";
+    }
+`
+
 const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
@@ -28,15 +44,15 @@ const TagsPage = ({
     <SEO title="Blog" />
     <Content>
       <h1>Tags</h1>
-      <ul>
+      <TagsContainer>
         {group.map((tag) => (
-          <li key={tag.fieldValue}>
+          <TagContainer key={tag.fieldValue}>
             <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
               {tag.fieldValue} ({tag.totalCount})
             </Link>
-          </li>
+          </TagContainer>
         ))}
-      </ul>
+      </TagsContainer>
     </Content>
   </Layout>
 )

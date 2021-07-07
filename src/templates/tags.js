@@ -11,6 +11,17 @@ const Content = styled.div`
   padding: 1.45rem 1.0875rem;
 `
 
+const TagContainer = styled.div`
+    margin: 10px 5px;
+    font-size: 20px;
+    & > a {
+        text-decoration: none;
+    }
+    & :before{
+        content: "🏷️";
+    }
+`
+
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
@@ -23,21 +34,15 @@ const Tags = ({ pageContext, data }) => {
       <SEO title="Tags" />
       <Content>
         <h1>{tagHeader}</h1>
-        <ul>
-          {edges.map(({ node }) => {
-            const { slug } = node.fields
-            const { title } = node.frontmatter
-            return (
-              <li key={slug}>
-                <Link to={`/blog/` + title}>{title}</Link>
-              </li>
-            )
-          })}
-        </ul>
-        {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
+        {edges.map(({ node }) => {
+          const { slug } = node.fields
+          const { title } = node.frontmatter
+          return (
+            <TagContainer key={slug}>
+              <Link to={`/blog/` + title}>{title}</Link>
+            </TagContainer>
+          )
+        })}
         <Link to="/tags">All tags</Link>
       </Content>
     </Layout>

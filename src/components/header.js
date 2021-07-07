@@ -9,6 +9,11 @@ const Content = styled.div`
   font-size: 1.2rem;
 `
 
+const NavContainer = styled.p`
+  display: flex;
+  flex-wrap: wrap;
+`
+
 const NavLink = styled(Link)`
   color: black;
   margin-left: 15px;
@@ -49,12 +54,12 @@ const SiteHeader = styled.header`
 const Header = ({ siteTitle }) => (
   <SiteHeader>
     <Content>
-      <p>
+      <NavContainer>
         <HomeLink to="/">Home</HomeLink>
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/tags">Tags</NavLink>
         <NavLink to="/about">About</NavLink>
-      </p>
+      </NavContainer>
     </Content>
   </SiteHeader>
 )
