@@ -2,6 +2,9 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import PropTypes from "prop-types"
 import React from "react"
+// import search component
+import Search from "./search"
+const searchIndices = [{ name: `blogs`, title: `blogs` }]
 
 const Content = styled.div`
   max-width: 860px;
@@ -9,7 +12,7 @@ const Content = styled.div`
   font-size: 1.2rem;
 `
 
-const NavContainer = styled.p`
+const NavContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 `
@@ -59,6 +62,7 @@ const Header = ({ siteTitle }) => (
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/tags">Tags</NavLink>
         <NavLink to="/about">About</NavLink>
+        <Search indices={searchIndices} />
       </NavContainer>
     </Content>
   </SiteHeader>
