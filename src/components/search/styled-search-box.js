@@ -2,7 +2,7 @@ import styled, { css } from "styled-components"
 import SearchBox from "./search-box"
 
 const open = css`
-  width: 8em;
+  width: 100%;
   background: ${({ theme }) => theme.background};
   cursor: text;
   margin-left: -1.2em;
@@ -21,8 +21,7 @@ export default styled(SearchBox)`
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  margin-bottom: 0;
-  margin-left: 15px;
+  margin: 0 1vh;
 
   .SearchInput {
     outline: none;
