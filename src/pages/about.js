@@ -11,15 +11,27 @@ const AboutContainer = styled.div`
   height: 78vh;
 `
 
+const AboutMe = styled.div`
+  font-size: 22px;
+`
+
 const BlockQuote = styled.blockquote`
   & {
-    background: #f9f9f9;
     border-left: 10px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
   }
-
+  &:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  & p {
+    display: inline;
+  }
 `
 
 const IndexPage = () => (
@@ -29,6 +41,7 @@ const IndexPage = () => (
       keywords={[`gatsby`, `lester lee`, `devops`, `back-end`, `full-stack`]}
     />
     <AboutContainer>
+      <AboutMe>一个半路出家的编程爱好者，喜欢折腾。</AboutMe>
       <BlockQuote>
         At some point, everything is going to go south on you. Everything is
         going to go south and you're going to say, "This is it. "This is how I
