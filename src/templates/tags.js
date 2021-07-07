@@ -12,14 +12,20 @@ const Content = styled.div`
 `
 
 const TagContainer = styled.div`
-    margin: 10px 5px;
-    font-size: 20px;
-    & > a {
-        text-decoration: none;
-    }
-    & :before{
-        content: "🏷️";
-    }
+  margin: 10px 5px;
+  font-size: 20px;
+  padding: 3px;
+  border-radius: 8px;
+  & > a {
+    text-decoration: none;
+  }
+  &:before {
+    content: "🏷️";
+  }
+  &:hover {
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+      0 0 0 1px rgb(10 10 10 / 2%);
+  }
 `
 
 const Tags = ({ pageContext, data }) => {

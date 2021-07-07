@@ -32,6 +32,30 @@ const ReadingTime = styled.h5`
   color: #606060;
 `
 
+const PostsContainer = styled.div`
+  & {
+    padding: 2vh;
+    margin: 2vh;
+    border-radius: 8px;
+  }
+
+  &:hover {
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%),
+      0 0 0 1px rgb(10 10 10 / 2%);
+  }
+`
+
+const TagContainer = styled.span`
+  margin: 10px 5px;
+  font-size: 20px;
+  & > a {
+    text-decoration: none;
+  }
+  & :before {
+    content: "🏷️";
+  }
+`
+
 class IndexPage extends React.Component {
   render() {
     const { data } = this.props
@@ -42,6 +66,7 @@ class IndexPage extends React.Component {
     const prevPage =
       current - 1 === 1 ? "/blog" : `/blog/` + (current - 1).toString()
     const nextPage = `/blog/` + (current + 1).toString()
+    console.log(posts)
     return (
       <Layout>
         <Seo title="Blog" />
@@ -54,7 +79,7 @@ class IndexPage extends React.Component {
               return date < new Date()
             })
             .map(({ node }) => (
-              <div key={node.id}>
+              <PostsContainer key={node.id}>
                 <Link
                   to={node.frontmatter.path}
                   css={css`
@@ -69,7 +94,14 @@ class IndexPage extends React.Component {
                   <ReadingTime> - {node.fields.readingTime.text}</ReadingTime>
                 </div>
                 <p>{node.excerpt}</p>
-              </div>
+                {node.frontmatter.tags.map((tag, key) => {
+                  return (
+                    <TagContainer key={key}>
+                      <Link to={`/tags/` + tag}>{tag}</Link>
+                    </TagContainer>
+                  )
+                })}
+              </PostsContainer>
             ))}
         </Content>
         <ul
@@ -134,6 +166,7 @@ export const blogListQuery = graphql`
         node {
           id
           frontmatter {
+            tags
             title
             date(formatString: "DD MMMM, YYYY")
             rawDate: date
