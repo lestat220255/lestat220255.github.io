@@ -29,6 +29,10 @@ const Footer = styled.footer`
   justify-content: center;
 `
 
+const MainContainer = styled.main`
+  min-height: 78vh;
+`
+
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -44,7 +48,7 @@ const Layout = ({ children }) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>
-          <main>{children}</main>
+          <MainContainer>{children}</MainContainer>
           <Footer>
             <p>
             © 2017-{new Date().getFullYear()}, Built with

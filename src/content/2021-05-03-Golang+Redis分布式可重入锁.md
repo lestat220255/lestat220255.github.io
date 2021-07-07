@@ -4,6 +4,7 @@ date: 2021-05-03T14:57:51.923Z
 draft: false
 path: /blog/Golang+Redis分布式可重入锁
 description: 自动重试,自动续期,可重入
+tags: ['golang', 'redis']
 ---
 ### 概念
 

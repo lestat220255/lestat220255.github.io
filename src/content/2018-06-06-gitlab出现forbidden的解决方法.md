@@ -4,6 +4,7 @@ date: 2018-06-06T22:39:11.923Z
 draft: false
 path: /blog/gitlab出现forbidden的解决方法
 description: 可能是配置问题
+tags: ['gitlab']
 ---
 
 

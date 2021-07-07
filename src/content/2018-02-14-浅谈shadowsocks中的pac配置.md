@@ -4,6 +4,7 @@ date: 2018-02-14T22:39:11.923Z
 draft: false
 path: /blog/浅谈shadowsocks中的pac配置
 description: 只为需要代理的请求做代理
+tags: ['proxy']
 ---
 
 大概是从去年开始使用的shadowsocks实现科学上网,当时在配置完代理服务器之后能够用了就没管其他的配置。  

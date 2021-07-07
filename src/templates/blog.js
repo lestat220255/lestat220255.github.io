@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -10,7 +9,6 @@ const Content = styled.div`
   margin: 0 auto;
   max-width: 860px;
   padding: 1.45rem 1.0875rem;
-  min-height: 78vh;
 `
 
 const ArticleDate = styled.h5`

@@ -14,6 +14,8 @@
 
 // You can delete this file if you're not using it
 
+
+
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
@@ -34,6 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
   // below for pagination
   const blogPostList = path.resolve("src/templates/blog.js")
+  const tagTemplate = path.resolve("src/templates/tags.js")
   return graphql(`
     {
       allMarkdownRemark {
@@ -44,11 +47,17 @@ exports.createPages = ({ graphql, actions }) => {
               draft
               date
               title
+              tags
             }
             fields {
               slug
             }
           }
+        }
+      }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
         }
       }
     }
@@ -70,7 +79,7 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create list of posts pages
     // https://www.gatsbyjs.org/docs/adding-pagination/
-    const postsPerPage = 6
+    const postsPerPage = 8
 
     // posts.length was replaced with count
     let numPages = Math.ceil(count / postsPerPage)
@@ -106,6 +115,19 @@ exports.createPages = ({ graphql, actions }) => {
           slug: post.node.fields.slug,
           previous,
           next,
+        },
+      })
+    })
+
+    // Extract tag data from query
+    const tags = result.data.tagsGroup.group
+    // Make tag pages
+    tags.forEach((tag) => {
+      createPage({
+        path: `/tags/${tag.fieldValue}/`,
+        component: tagTemplate,
+        context: {
+          tag: tag.fieldValue,
         },
       })
     })

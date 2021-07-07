@@ -4,6 +4,7 @@ date: 2018-11-09T22:39:11.923Z
 draft: false
 path: /blog/关于docker内nginx获取真实client-ip的问题
 description: MacOS有坑
+tags: ['docker', 'nginx']
 ---
 
 ### 环境

@@ -4,6 +4,7 @@ date: 2021-05-02T22:39:11.923Z
 draft: false
 path: /blog/Golang+Redis分布式互斥锁
 description: 自动重试,自动续期
+tags: ['golang', 'redis']
 ---
 ### 引言
 

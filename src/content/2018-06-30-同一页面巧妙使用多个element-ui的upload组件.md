@@ -4,6 +4,7 @@ date: 2018-06-30T22:39:11.923Z
 draft: false
 path: /blog/同一页面巧妙使用多个element-ui的upload组件
 description: element-ui多组upload组件使用技巧
+tags: ['vue', 'element-ui']
 ---
 
 

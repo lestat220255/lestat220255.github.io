@@ -4,6 +4,7 @@ date: 2018-05-21T22:39:11.923Z
 draft: false
 path: /blog/docker搭建gitlab和svn服务
 description: 实现免费的私有仓库
+tags: ['gitlab', 'docker']
 ---
 
 > 之前公司里的代码都是托管到局域网服务器上的,现在由于部分同事远程办公的需要,计划把git和svn都转到公网的centos服务器上去,但是gitlab的配置是真心费时间,所以决定用docker来做这个事情,以下是一些步骤和总结  

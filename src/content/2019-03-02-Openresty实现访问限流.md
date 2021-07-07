@@ -4,6 +4,7 @@ date: 2019-03-02T22:39:11.923Z
 draft: false
 path: /blog/Openresty实现访问限流
 description: 自己动手实现一个基于nginx+lua+redis的限制client访问频率+自动拉黑的限流方案
+tags: ['openresty']
 ---
 
 

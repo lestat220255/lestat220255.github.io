@@ -4,6 +4,7 @@ date: 2019-03-08T22:39:11.923Z
 draft: false
 path: /blog/laravel基于redis的分布式秒杀系统
 description: 通过redis的lpop实现防超卖
+tags: ['laravel', 'redis']
 ---
 
 ## 场景

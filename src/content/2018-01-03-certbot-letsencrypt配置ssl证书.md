@@ -1,9 +1,10 @@
 ---
-title: ertbot+letsencrypt配置免费单证书多域名ssl证书
+title: certbot+letsencrypt配置免费单证书多域名ssl证书
 date: 2018-01-03T22:39:11.923Z
 draft: false
-path: /blog/ertbot+letsencrypt配置免费单证书多域名ssl证书
+path: /blog/certbot+letsencrypt配置免费单证书多域名ssl证书
 description: 可配合定时任务实现自动续期
+tags: ['ssl']
 ---
 
 

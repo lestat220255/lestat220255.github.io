@@ -4,6 +4,7 @@ date: 2017-12-18T22:39:11.923Z
 draft: false
 path: /blog/SoapClient的一点总结
 description: 一些需要注意的细节配置
+tags: ['记录']
 ---
 
 **近期在开发一个小型的酒店订房系统**  

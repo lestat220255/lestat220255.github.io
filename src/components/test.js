@@ -1,8 +1,8 @@
-import React from "react"
+// import React from "react"
 // import styled from "@emotion/styled"
 // import PropTypes from "prop-types"
 // import { StaticQuery, useStaticQuery } from "gatsby"
-import { graphql } from "gatsby"
+// import { graphql } from "gatsby"
 
 // const TestBox = styled.span`
 //   margin: 0px;
@@ -59,16 +59,16 @@ import { graphql } from "gatsby"
 //   )
 // }
 
-const PageQueryDemo = ({ data }) => <pre>{JSON.stringify(data, null, 4)}</pre>
+// const PageQueryDemo = ({ data }) => <pre>{JSON.stringify(data, null, 4)}</pre>
 
-export default PageQueryDemo
+// export default PageQueryDemo
 
-export const query = graphql`
-  {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `

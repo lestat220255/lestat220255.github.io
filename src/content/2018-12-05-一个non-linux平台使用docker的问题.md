@@ -4,6 +4,7 @@ date: 2018-12-05T22:39:11.923Z
 draft: false
 path: /blog/一个non-linux平台使用docker的问题
 description: 频繁的I/O操作导致
+tags: ['docker']
 ---
 
 ### 相关问题

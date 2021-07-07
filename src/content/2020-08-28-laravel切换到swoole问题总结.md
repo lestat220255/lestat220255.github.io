@@ -4,6 +4,7 @@ date: 2020-08-28T22:39:11.923Z
 draft: false
 path: /blog/laravel切换到swoole问题总结
 description: 单例,静态变量,全局常量
+tags: ['laravel', 'swoole']
 ---
 ## 环境
 

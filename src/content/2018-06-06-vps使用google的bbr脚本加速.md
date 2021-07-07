@@ -4,6 +4,7 @@ date: 2018-06-06T22:39:11.923Z
 draft: false
 path: /blog/vps使用google的bbr脚本加速
 description: Youtube 1080P轻松看
+tags: ['proxy']
 ---
 
 
@@ -32,5 +33,5 @@ System Required:  CentOS 6+, Debian7+, Ubuntu12+
 
 ### 效果
 直接看YouTube的1080P视频吧,最直观,直接上图  
-![](https://lestat.b0.upaiyun.com/blog/bbr_speed.jpg)
+![](https://raw.githubusercontent.com/lestat220255/images/main/20210707073208.png)
 全程无卡顿  
