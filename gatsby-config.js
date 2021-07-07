@@ -5,8 +5,8 @@ require("dotenv").config({
 module.exports = {
   pathPrefix: "/lestat220255.github.io",
   siteMetadata: {
-    title: `Lester Lee`,
-    subtitle: `web developer`,
+    title: `Yup I Love Noodles`,
+    subtitle: `Lester Lee`,
     description: `DevOps and relevant stuff`,
     author: `@lester`,
     siteUrl: `https://yup-i-love-noodles.netlify.app`,
@@ -80,6 +80,9 @@ module.exports = {
         icon: `src/images/avatar.png`, // This path is relative to the root of the site.
       },
     },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    "gatsby-plugin-offline",
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -102,7 +105,9 @@ module.exports = {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.excerpt,
                   date: edge.node.frontmatter.date,
-                  url: encodeURI(site.siteMetadata.siteUrl + edge.node.fields.slug),
+                  url: encodeURI(
+                    site.siteMetadata.siteUrl + edge.node.fields.slug
+                  ),
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   custom_elements: [{ "content:encoded": edge.node.html }],
                 })
@@ -149,8 +154,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-styled-components`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
   ],
 }
