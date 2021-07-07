@@ -71,47 +71,46 @@ class IndexPage extends React.Component {
                 <p>{node.excerpt}</p>
               </div>
             ))}
-          <ul
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-between",
-              alignItems: "center",
-              listStyle: "none",
-              padding: 0,
-            }}
-          >
-            {!isFirst && (
-              <Link to={prevPage} rel="prev">
-                ← Previous Page
-              </Link>
-            )}
-            {Array.from({ length: total }, (_, i) => (
-              <li
-                key={`pagination-number${i + 1}`}
+        </Content>
+        <ul
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            alignItems: "center",
+            listStyle: "none",
+            padding: 0,
+          }}
+        >
+          {!isFirst && (
+            <Link to={prevPage} rel="prev">
+              ← Previous Page
+            </Link>
+          )}
+          {Array.from({ length: total }, (_, i) => (
+            <li
+              key={`pagination-number${i + 1}`}
+              style={{
+                margin: 0,
+              }}
+            >
+              <Link
+                to={`/blog/${i === 0 ? "" : i + 1}`}
                 style={{
-                  margin: 0,
+                  textDecoration: "none",
+                  background: i + 1 === current ? "rgba(255,250,150,0.8)" : "",
                 }}
               >
-                <Link
-                  to={`/blog/${i === 0 ? "" : i + 1}`}
-                  style={{
-                    textDecoration: "none",
-                    background:
-                      i + 1 === current ? "rgba(255,250,150,0.8)" : "",
-                  }}
-                >
-                  {i + 1}
-                </Link>
-              </li>
-            ))}
-            {!isLast && (
-              <Link to={nextPage} rel="next">
-                Next Page →
+                {i + 1}
               </Link>
-            )}
-          </ul>
-        </Content>
+            </li>
+          ))}
+          {!isLast && (
+            <Link to={nextPage} rel="next">
+              Next Page →
+            </Link>
+          )}
+        </ul>
       </Layout>
     )
   }
