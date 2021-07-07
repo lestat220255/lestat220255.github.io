@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import DisqusContainer from "../components/disqus"
 
 const Content = styled.div`
@@ -57,7 +57,7 @@ class IndexPage extends React.Component {
     const { previous, next } = this.props.pageContext
     return (
       <Layout>
-        <SEO
+        <Seo
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />

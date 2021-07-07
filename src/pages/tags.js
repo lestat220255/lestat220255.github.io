@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
 
@@ -41,7 +41,7 @@ const TagsPage = ({
   },
 }) => (
   <Layout>
-    <SEO title="Blog" />
+    <Seo title="Blog" />
     <Content>
       <h1>Tags</h1>
       <TagsContainer>

@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -44,7 +44,7 @@ class IndexPage extends React.Component {
     const nextPage = `/blog/` + (current + 1).toString()
     return (
       <Layout>
-        <SEO title="Blog" />
+        <Seo title="Blog" />
         <Content>
           <h1>Blog</h1>
           {posts

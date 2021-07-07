@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const AboutContainer = styled.div`
   display: flex;
@@ -40,7 +40,7 @@ const BlockQuote = styled.blockquote`
 
 const IndexPage = () => (
   <Layout>
-    <SEO
+    <Seo
       title="About"
       keywords={[`gatsby`, `lester lee`, `devops`, `back-end`, `full-stack`]}
     />

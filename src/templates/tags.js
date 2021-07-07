@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import styled from "@emotion/styled"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -31,7 +31,7 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <SEO title="Tags" />
+      <Seo title="Tags" />
       <Content>
         <h1>{tagHeader}</h1>
         {edges.map(({ node }) => {
