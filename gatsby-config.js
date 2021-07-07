@@ -77,15 +77,15 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        // icon: `src/images/avatar.png`, // This path is relative to the root of the site.
-        icons: [
-          {
-            src: `src/images/avatar.png`,
-            sizes: "196x196",
-            type: "image/png",
-            purpose: "a maskable icon", // This path is relative to the root of the site.
-          },
-        ],
+        icon: `src/images/avatar.png`, // This path is relative to the root of the site.
+        // icons: [
+        //   {
+        //     src: `src/images/avatar.png`,
+        //     sizes: "512x512",
+        //     type: "image/png",
+        //     purpose: "a maskable icon", // This path is relative to the root of the site.
+        //   },
+        // ],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
