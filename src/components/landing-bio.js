@@ -19,7 +19,7 @@ const OuterContainer = styled.div`
 
 const Description = styled.p`
   padding: 0;
-  margin-bottom: 1rem;
+  margin: 1rem;
   font-size: 1.4rem;
 `
 
