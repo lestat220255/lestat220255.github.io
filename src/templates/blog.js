@@ -37,6 +37,7 @@ const PostsContainer = styled.div`
     padding: 2vh;
     margin: 2vh;
     border-radius: 8px;
+    transition: box-shadow 0.5s;
   }
 
   &:hover {
@@ -67,8 +68,12 @@ const ReadMore = styled.button`
   font-size: 20px;
   background-color: inherit;
   border-color: inherit;
-  border-width: 2px;
+  border-width: 1px;
   border-radius: 5px;
+  font-size: 12px;
+  white-space: pre;
+  font-weight: bold;
+  max-height: 27px;
   & > a {
     text-decoration: none;
   }

@@ -16,6 +16,8 @@ const TagContainer = styled.div`
   font-size: 20px;
   padding: 3px;
   border-radius: 8px;
+  transition: box-shadow .5s;
+
   & > a {
     text-decoration: none;
   }

@@ -24,8 +24,10 @@ const TagsContainer = styled.div`
 const TagContainer = styled.div`
   margin: 10px 5px;
   padding: 3px;
-  font-size: 20px;
   border-radius: 8px;
+  font-size: 20px;
+  transition: box-shadow .5s;
+
   & > a {
     text-decoration: none;
   }
