@@ -22,7 +22,7 @@ const BlockQuote = styled.blockquote`
     border-left: 10px solid #ccc;
     margin: 1.5em 10px;
     padding: 0.5em 10px;
-    max-height: 510px;
+    max-height: 320px;
     overflow: scroll;
     color: #4a4a4a;
   }
