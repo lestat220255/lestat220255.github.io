@@ -35,7 +35,7 @@ const ReadingTime = styled.h5`
 const PostsContainer = styled.div`
   & {
     padding: 2vh;
-    margin: 2vh;
+    margin: 0 0 3vh 0;
     border-radius: 8px;
     transition: box-shadow 0.5s;
   }
