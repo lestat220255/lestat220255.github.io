@@ -15,6 +15,10 @@ const Content = styled.div`
 const NavContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 261px;
+  max-width: 261px;
+  margin: 0 auto;
 `
 
 const NavLink = styled(Link)`
@@ -62,8 +66,8 @@ const Header = ({ siteTitle }) => (
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/tags">Tags</NavLink>
         <NavLink to="/about">About</NavLink>
-        <Search indices={searchIndices} />
       </NavContainer>
+      <Search indices={searchIndices} />
     </Content>
   </SiteHeader>
 )
