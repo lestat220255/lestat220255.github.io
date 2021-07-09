@@ -18,12 +18,13 @@ const NavContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 261px;
-  max-width: 261px;
+  width: 265px;
+  max-width: 265px;
   margin: 0 auto;
 `
 
 const NavLink = styled(Link)`
+  font-weight: 800;
   color: black;
   margin-left: 15px;
   text-decoration: none;
@@ -61,8 +62,8 @@ const SiteHeader = styled.header`
 `
 
 const Divider = styled.hr`
-  width: 261px;
-  max-width: 261px;
+  width: 265px;
+  max-width: 265px;
   margin: 1vh auto -0.3vh auto;
 `
 

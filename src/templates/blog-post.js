@@ -6,7 +6,7 @@ import Seo from "../components/seo"
 import DisqusContainer from "../components/disqus"
 
 const Content = styled.div`
-  margin: 0 auto;
+  margin: 3vh auto;
   max-width: 860px;
   padding: 1.45rem 1.0875rem;
 `
