@@ -10,6 +10,8 @@ const Content = styled.div`
   max-width: 860px;
   padding: 1rem 1.0875rem;
   font-size: 1.2rem;
+  height: 10vh;
+  max-height: 10vh;
 `
 
 const NavContainer = styled.div`
@@ -58,6 +60,12 @@ const SiteHeader = styled.header`
   justify-content: center;
 `
 
+const Divider = styled.hr`
+  width: 261px;
+  max-width: 261px;
+  margin: 1vh auto -0.3vh auto;
+`
+
 const Header = ({ siteTitle }) => (
   <SiteHeader>
     <Content>
@@ -67,6 +75,7 @@ const Header = ({ siteTitle }) => (
         <NavLink to="/tags">Tags</NavLink>
         <NavLink to="/about">About</NavLink>
       </NavContainer>
+      <Divider />
       <Search indices={searchIndices} />
     </Content>
   </SiteHeader>

@@ -10,11 +10,11 @@ const Popover = css`
   top: 100%;
   margin-top: 0.5em;
   width: 80vw;
-  max-width: 80vw;
+  max-width: 25em;
   box-shadow: 0 0 5px 0;
   padding: 1em;
   border-radius: 2px;
-  background-color: rgb(239, 240, 227);
+  background: rgba(239, 240, 227, .9);
 `
 
 export default styled(SearchResult)`
