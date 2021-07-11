@@ -52,7 +52,7 @@ const IndexPage = () => (
       keywords={[`gatsby`, `lester lee`, `devops`, `back-end`, `full-stack`]}
     />
     <AboutContainer>
-      <AboutMe>一个半路出家的编程爱好者，喜欢折腾。</AboutMe>
+      <AboutMe>一个半路出家的编程爱好者。喜欢折腾，热爱分享。</AboutMe>
       <BlockQuote>
         <div>
         At some point, everything is going to go south on you. Everything is
