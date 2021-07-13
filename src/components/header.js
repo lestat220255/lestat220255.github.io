@@ -18,8 +18,8 @@ const NavContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 265px;
-  max-width: 265px;
+  width: 267px;
+  max-width: 267px;
   margin: 0 auto;
 `
 
